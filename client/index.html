@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="public/iconlogo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rohan's Tony Stark | Jarvis AI</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body onload="getFocus()">
+    <div id="app">
+      <div id="chat_container"></div>
+      <form>
+        <textarea name="prompt" id="inputBox" placeholder="Ask Jarvis..." cols="1" rows="1"></textarea>
+        <button type="submit"><img src="assets/send.svg" alt="sendButton"></button>
+      </form>
+    </div>
+    <script type="module" src="script.js"></script>
+    <script>
+      function getFocus() {
+        document.getElementById("inputBox").focus();
+      }
+      document.onkeydown = function (e) {
+    if (event.keyCode == 123) {
+      return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == "I".charCodeAt(0)) {
+      return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == "C".charCodeAt(0)) {
+      return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == "J".charCodeAt(0)) {
+      return false;
+    }
+    if (e.ctrlKey && e.keyCode == "U".charCodeAt(0)) {
+      return false;
+    }
+};
+document.addEventListener("contextmenu", (event) => event.preventDefault());
+
+    </script>
+  </body>
+</html>
+ 
